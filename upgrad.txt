@@ -1,0 +1,41 @@
+var testObject = {
+  testKey1 : 'testValue1',
+  'test-Key2' : 'testValue2'
+};
+
+// Change the values here
+testObject.testKey1="newValue1";
+testObject["test-Key2"]="newValue2";
+
+// Print testObject here
+console.log(testObject);
+
+// Define a function named greet which displays the message "Hello user!" on the console
+function greet() {
+    console.log("Hello user!");
+}
+
+// Invoke the function defined above
+greet();
+
+
+
+// Define a function named power which calculates the result of a base raised to the power of an exponent
+function power(base, exponent) {
+    var result = 1;
+    for (var i = 1; i <= exponent; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+// Invoke the function with base 2 and exponent 3 passed as arguments
+var pow = power(2, 3);
+
+// Print the result (power) of the invoked function
+console.log(pow);
+
+var n = 2;
+for (var i = n; i < 12; i = i + n) {
+  console.log(i);
+}

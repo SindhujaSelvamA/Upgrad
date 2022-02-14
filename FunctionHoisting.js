@@ -1,0 +1,6 @@
+sum(5,10);
+function sum(num1,num2)
+{
+    console.log(num1+num2)
+}
+sum(98,2)

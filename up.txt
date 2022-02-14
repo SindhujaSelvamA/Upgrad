@@ -1,0 +1,113 @@
+/* 
+You have to code a country code checker which checks which country does the given number belongs to
+
+The options are as follows:
+91 - India
+55 - Brazil
+81 - Japan
+30 - Greece
+47 - Norway
+If a number does not belong from any country, then print "Other Country"
+The number needs to be input as "CC-XXXXX-XXXXX" (CC being country code)
+*/
+
+var phoneNumber = '91-99999-99999';
+
+switch (parseInt(phoneNumber)) {
+    case 91:
+        console.log('India')
+        break;
+    case 55:
+        console.log('Brazil')
+        break;
+    case 81:
+        console.log('Japan');
+        break;
+    case 30:
+        console.log('Greece')
+        break;
+    case 47:
+        console.log('Norway')
+        break;
+    default:
+        console.log('Other Country')
+}
+
+
+
+
+var n=1;
+while(n<100){
+if(n%7==0){
+    console.log(n);
+}
+n++;
+
+}
+
+
+
+
+
+
+
+
+var num=4567, rem, sum=0;
+  while(num)
+  {
+    rem = num%10;
+    sum = sum+rem;
+    num = Math.floor(num/10);
+  }
+ console.log(sum);
+
+var num = prompt("Enter a number:");
+num = parseInt(num);
+var sum = 0, n = num;
+while (n > 0) {
+   sum += (n % 10);
+   n = Math.floor(n / 10);
+}
+console.log("Sum of the digits of " + num + " = " + sum);
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<script>
+function addDigitsOfNumber()
+{
+  var num, rem, sum=0;
+  num = parseInt(document.getElementById("num").value);
+  while(num)
+  {
+    rem = num%10;
+    sum = sum+rem;
+    num = Math.floor(num/10);
+  }
+  document.getElementById("result").value = sum;
+}
+</script>
+</head>
+<body>
+
+<p>Enter the Number: <input id="num"></p>
+<button onclick="addDigitsOfNumber()">Add Digits Of Number</button>
+<p>Result = <input id="result"></p>
+
+</body>
+</html>
+
+
+
+
+          
