@@ -1,0 +1,41 @@
+var laptop = {
+   company: "Apple",
+   model: "Macbook Air",
+   os: "macOS",
+   set: function (company, model, os) {
+       var setCompany = function (company) {
+           this.company = company;
+       }.bind(this, company);
+
+       var setModel = function (model) {
+           this.model = model;
+       }.call(this, model);
+
+       var setOS = function (os) {
+           this.os = os;
+       }.apply(this, os);
+   },
+   get: function () {
+       console.log("Company = " + this.company + "\nModel = " + this.model + "\nOS = " + this.os);
+   }
+};
+
+laptop.set("Dell", "Inspiron", "Windows");
+laptop.get();
+
+
+
+output:
+
+
+Uncaught TypeError: CreateListFromArrayLike called on non-object
+
+? Correct
+Feedback:
+Note that the function setCompany() inside the set() method uses bind() method and when using the bind() method, you need to explicitly call the function. Since the setCompany() function is not called anywhere, the key named company of the laptop object is not updated and thus, retains its old value, viz., Apple.
+
+The function setModel() inside the get() method uses call() method and passes the argument model inside this function. Since the function which uses call() method is implicitly called, you do not have to call this function. Thus, this function successfully updates the model key of the laptop object.
+
+The function setOS() inside the get() method uses apply() method and passes the argument named os inside this function. Since the apply() method expects the arguments to be provided as an array and here, the argument is provided without enclosed in an array, this function, thus, throws a type error “CreateListFromArrayLike called on non-object”.
+
+Thus, this option is the correct choice.

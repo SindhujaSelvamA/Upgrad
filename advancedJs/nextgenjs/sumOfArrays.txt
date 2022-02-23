@@ -1,0 +1,6 @@
+var input = [234, 567, 273, 456, 598, 635, 644, 718, 750, 753, 801];
+
+input.reduce(function(x,y){
+    console.log("x:",x,"y:",y)
+    return x+y;
+})
